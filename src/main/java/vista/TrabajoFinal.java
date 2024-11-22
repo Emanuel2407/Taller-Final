@@ -19,7 +19,7 @@ public class TrabajoFinal {
 
     private static void tipoMaterial() {
         byte material;
-        
+        char sw;
         do{
         System.out.println("Ingrese con que tipo de material desea operar teniendo en cuenta las siguientes opciones: "
         + "\n1:Libro \n2:Revista \n3:Material videografico");
@@ -31,31 +31,89 @@ public class TrabajoFinal {
             
             case 1:      
                 registrarLibro();
-                buscarLibro();
-                actualizarLibro();
-                eliminarLibro();
-                listarLibros();
+                
+                System.out.println("\n¿Desea buscar un libro registrado? (S/N)");
+                sw = input.next().toUpperCase().charAt(0);
+                if (sw == 'S'){
+                    buscarLibro();
+                }
+                
+                System.out.println("\n¿Desea actualizar un libro registrado? (S/N)");
+                sw = input.next().toUpperCase().charAt(0);
+                if (sw == 'S'){
+                    actualizarLibro();
+                }
+
+                System.out.println("\n¿Desea eliminar un libro registrado? (S/N)");
+                sw = input.next().toUpperCase().charAt(0);
+                if (sw == 'S'){                
+                    eliminarLibro();
+                }
+
+                System.out.println("\n¿Desea listar los libros registrados? (S/N)");
+                sw = input.next().toUpperCase().charAt(0);
+                if (sw == 'S'){                                
+                    listarLibros();
+                }
                 break;
                 
             case 2:
                 registrarRevista();
-                buscarRevista();
-                actualizarRevista();
-                eliminarRevista();
-                listarRevista(); 
+                
+                System.out.println("\n¿Desea buscar una revista registrada? (S/N)");
+                sw = input.next().toUpperCase().charAt(0);
+                if (sw == 'S'){
+                    buscarRevista();
+                }
+                
+                System.out.println("\n¿Desea actualizar una revista registrada? (S/N)");
+                sw = input.next().toUpperCase().charAt(0);
+                if (sw == 'S'){
+                    actualizarRevista();
+                }
+
+                System.out.println("\n¿Desea eliminar una revista registrada? (S/N)");
+                sw = input.next().toUpperCase().charAt(0);
+                if (sw == 'S'){                
+                    eliminarRevista();
+                }
+
+                System.out.println("\n¿Desea listar las revistas registradas? (S/N)");
+                sw = input.next().toUpperCase().charAt(0);
+                if (sw == 'S'){                                
+                    listarRevista();
+                }                 
                 break;
                 
             case 3:
                 registrarMaterialVideografico();
-                buscarMaterialVideografico();
-                actualizarMaterialVideografico();
-                eliminarMaterialVideografico();
-                listarMaterialVideografico();
+                
+                System.out.println("\n¿Desea buscar un material videografico registrado? (S/N)");
+                sw = input.next().toUpperCase().charAt(0);
+                if (sw == 'S'){
+                    buscarMaterialVideografico();
+                }
+                
+                System.out.println("\n¿Desea actualizar un material videografico registrado? (S/N)");
+                sw = input.next().toUpperCase().charAt(0);
+                if (sw == 'S'){
+                    actualizarMaterialVideografico();
+                }
+
+                System.out.println("\n¿Desea eliminar un material videografico registrado? (S/N)");
+                sw = input.next().toUpperCase().charAt(0);
+                if (sw == 'S'){                
+                    eliminarMaterialVideografico();
+                }
+
+                System.out.println("\n¿Desea listar los materiales videograficos registrados? (S/N)");
+                sw = input.next().toUpperCase().charAt(0);
+                if (sw == 'S'){                                
+                    listarMaterialVideografico();
+                }
                 break;
         }
-
-        
-       
+   
     }
 
     private static void registrarLibro() {
